@@ -1,0 +1,32 @@
+public class App {
+    public static void main(String[] args) {
+
+        byte byteV = 20;
+        short shortV = 55;
+        int intV = 888;
+        long longV = 23355;
+        
+        float floatV = 8834.8f;
+      
+        double doubleV = 32.4;
+        
+        System.out.println(Byte.MAX_VALUE);
+        
+        intV= (int)longV;
+        
+        System.out.println(intV);
+        
+        doubleV = intV;
+        System.out.println(doubleV);
+        
+        intV = (int)floatV;
+        System.out.println(intV);
+    
+    
+     
+        byteV = (byte)128;
+        System.out.println(byteV);
+
+    }
+
+}
