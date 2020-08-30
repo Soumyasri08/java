@@ -1,0 +1,56 @@
+public class App {
+
+    public static void main(String[] args) {
+       
+        Car car1 = new Car();
+        car1.setId(4);
+        
+        car1.run();
+        
+       
+    }
+
+}
+public abstract class Machine {
+    private int id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
+    public abstract void start();
+    public abstract void doStuff();
+    public abstract void shutdown();
+    
+    public void run() {
+        start();
+        doStuff();
+        shutdown();
+    }
+}
+public class Car extends Machine {
+
+    @Override
+    public void start() {
+        System.out.println("Starting ignition...");
+        
+    }
+
+    @Override
+    public void doStuff() {
+        System.out.println("Driving...");
+    }
+
+    @Override
+    public void shutdown() {
+        System.out.println("Switch off ignition.");
+          
+    }
+
+}
+
+ 
