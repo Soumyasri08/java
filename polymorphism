@@ -1,0 +1,65 @@
+public class App {
+
+    public static void main(String[] args) {
+        
+        
+        Plant plant1 = new Plant();
+        
+        // Tree is a kind of Plant
+        Tree tree = new Tree();
+        
+        // Polymorphism guarantees that we can use a child class
+        // wherever a parent class is expected.
+        Plant plant2 = tree;
+        
+        // plant2 references a Tree, so the Tree grow() method is called.
+        plant2.grow();
+        
+        
+        // we need a Tree-type reference to call tree-specific methods.
+        tree.shedLeaves();
+        
+       
+        
+        
+    }
+    
+    public static void doGrow(Plant plant) {
+        plant.grow();
+    }
+
+}
+
+ 
+Plant.java:
+
+ 
+
+public class Plant {
+    public void grow() {
+        System.out.println("Plant growing");
+    }
+}
+
+ 
+Tree.java:
+
+ 
+
+public class Tree extends Plant {
+
+    @Override
+    public void grow() {
+        System.out.println("Tree growing");
+    }
+    
+    public void shedLeaves() {
+        System.out.println("Leaves shedding.");
+    }
+    
+}
+
+ 
+ 
+
+
