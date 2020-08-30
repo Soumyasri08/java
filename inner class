@@ -1,0 +1,79 @@
+public class App {
+
+    
+    public static void main(String[] args) {
+    
+        Robot robot = new Robot(7);
+        robot.start();
+        
+        // The syntax below will only work if Brain is
+        // declared public. 
+        // Robot.Brain brain = robot.new Brain();
+        // brain.think();
+        
+       
+        Robot.Battery battery = new Robot.Battery();
+        battery.charge();
+    }
+
+}
+
+ 
+Robot.java:
+
+ 
+
+public class Robot {
+
+    private int id;
+    
+    
+    private class Brain {
+        public void think() {
+            System.out.println("Robot " + id + " is thinking.");
+        }
+    }
+
+    // static inner classes do not have access to instance data.
+    
+    public static class Battery {
+        public void charge() {
+            System.out.println("Battery charging...");
+        }
+    }
+
+    public Robot(int id) {
+        this.id = id;
+    }
+
+    public void start() {
+        System.out.println("Starting robot " + id);
+        
+        // Use Brain. We don't have an instance of brain
+        // until we create one. Instances of brain are 
+        // always associated with instances of Robot
+        Brain brain = new Brain();
+        brain.think();
+        
+        final String name = "Robert";
+        
+        // Sometimes it's useful to create local classes
+        
+        class Temp {
+            public void doSomething() {
+                System.out.println("ID is: " + id);
+                System.out.println("My name is " + name);
+            }
+        }
+        
+        Temp temp = new Temp();
+        temp.doSomething();
+    }
+}
+ 
+ 
+
+
+
+
+
