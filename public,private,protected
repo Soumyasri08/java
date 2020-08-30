@@ -1,0 +1,43 @@
+/*public  ---  accessed anywhere
+  private ---- within the same class
+  protected --- same class,subclass*/
+  
+  
+import world.plant;
+public class App {
+
+    public static void main(String[] args) {
+        Plant plant = new Plant();
+        
+        System.out.println(plant.name); // plant name is declared public so it can be accessed
+        
+        System.out.println(plant.ID); 
+        }
+        }
+        
+        
+        
+        
+package world;
+
+
+public class Plant {
+   
+    public String name;
+    
+   
+    public final static int ID = 8;// id is declared as final so it cannot be changed
+    
+    private String type; //belongs to only plant class.cannot be accessed outside the class
+    
+    protected String size; //we can acess this anywhere in the same package or class.
+    
+    int height;
+    
+    public Plant() {
+        this.name = "Freddy";
+        this.type = "plant";
+        this.size = "medium";
+        this.height = 8;
+    }
+}
