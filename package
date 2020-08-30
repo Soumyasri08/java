@@ -1,0 +1,24 @@
+//package is a mechanism to group classes,sub classes and interfaces etc..
+
+
+import ocean.Fish;//here we are grouping ocean package which consists Fish class into class App
+import ocean.plants.seaweed;
+public class App {
+
+    
+    public static void main(String[] args) {
+        Fish fish = new Fish();
+        Seaweed weed = new Seaweed();
+    }
+
+}
+package ocean;
+
+public class Fish {
+
+}
+package ocean.plants;
+
+public class Seaweed {
+
+}
