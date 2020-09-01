@@ -1,0 +1,12 @@
+class A {
+public static void main(String args[])
+{
+int a=10;
+if(a!=0)  //when the condition is true the loop executes
+{
+System.out.println("value of a : %d" + a);
+}
+else  //when the condition in if loop is false the else part executes
+System.out.println("NULL");
+}
+}
