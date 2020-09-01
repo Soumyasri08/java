@@ -1,0 +1,19 @@
+class loop2
+{
+public static void main(String args[])
+{
+
+int n=5;
+//This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop if true else terminates the loop.
+do
+{
+n++;
+System.out.println(n);
+}
+while(n!=10);
+
+  System.out.print();
+
+
+}
+}
