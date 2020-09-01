@@ -1,0 +1,24 @@
+
+/*we can read files using Scanner*/
+import java.util.Scanner;
+ class java
+{
+public static void main(String args[])throws FileNotFoundException
+{
+//creating a file instance
+String filename = "C:/user/soumy/Desktop/example.txt";
+
+File textfile = new File(filename);
+ // creating a scanner instance
+ 
+Scanner sc = new Scanner(textfile);
+ 
+//reading every line of file
+ int lineNumber = 1;
+        while(sc.hasNextLine()){
+            String line = scnr.nextLine();
+            System.out.println("line " + lineNumber + " :" + line);
+            lineNumber++;
+
+
+}
