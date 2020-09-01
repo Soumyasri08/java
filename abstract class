@@ -1,3 +1,7 @@
+/*
+Java Abstract class can implement interfaces without even providing the implementation of interface methods. 
+*/
+
 public class App {
 
     public static void main(String[] args) {
