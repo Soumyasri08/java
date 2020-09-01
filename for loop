@@ -1,0 +1,17 @@
+import java.util.*;
+/*for loop iterates the part of a program for multiple times.
+it is useful when how many times a task is needed to be executed.*/
+class B
+{
+public static void main(String args[])
+{
+int a,i;
+
+for(i=1;i<=10;i++) // it consists of initialization,condition,increment or decrement
+  //this loop executes until the condition is satisfied
+{
+a=i*i;
+System.out.println(a);
+}
+}
+}
