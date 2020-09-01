@@ -4,7 +4,7 @@ public static void main(String args[])
 {
 
 int a = 1;
-
+//A while loop statement in Java programming language repeatedly executes a target statement as long as a given condition is true.
 while (a<10)
 {
 System.out.println("value of a: " + a);
