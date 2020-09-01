@@ -1,3 +1,6 @@
+/*Multidimensional array is an array of arrays having multiple rows and columns.
+Data or elements in multidimensional array is stored in the form of rows and columns. Data is accessed using row column index.*/
+
 class Marray
 {
 public static void main(String args[])
