@@ -1,0 +1,51 @@
+/*In this list every element is stored with a data part and also address.
+It does not contain duplicate elements.
+It maintains insertion order
+*/
+
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+
+public class App {
+
+
+    public static void main(String[] args) {
+       
+       //this refers arraylist
+        List<Integer> arrayList = new ArrayList<Integer>();
+        
+        
+         //this refers linked list
+        List<Integer> linkedList = new LinkedList<Integer>();
+        
+        doTimings("ArrayList", arrayList);
+        doTimings("LinkedList" , linkedList);
+    }
+    
+    // Arraylist takes much time compared to linked list.LinkedList add method gives O(1) performance while ArrayList gives O(n) 
+    private static void doTimings(String type, List<Integer> list) {
+        
+        for(int i=0; i<1E5; i++) {
+            list.add(i);
+        }
+        
+        long start = System.currentTimeMillis();
+        
+       
+        
+        // Add items elsewhere in list
+        for(int i=0; i<1E5; i++) {
+            list.add(0, i);
+        }
+        
+        long end = System.currentTimeMillis();
+        
+        System.out.println("Time taken: " + (end - start) + " ms for " + type);
+    }
+    
+
+
+}
