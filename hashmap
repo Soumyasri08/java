@@ -1,0 +1,39 @@
+/*
+HashMap is used for storing key and value pairs <K,V>.
+In hash map keys should be unique. 
+Java HashMap may have one null key and multiple null values.
+If you try to insert the duplicate key, it will replace the element of the corresponding key.
+
+*/
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class App {
+
+
+    public static void main(String[] args) {
+       //hash map consists of key,value pair.
+        HashMap<Integer, String> map = new HashMap<Integer, String>();
+        
+        //Adding
+        map.put(5, "Five");
+        map.put(8, "Eight");
+        map.put(6, "Six");
+        map.put(4, "Four");
+        map.put(2, "Two");
+        
+        String text = map.get(6);
+        
+        System.out.println(text);
+        
+        for(Map.Entry<Integer, String> entry: map.entrySet()) {
+            int key = entry.getKey();
+            String value = entry.getValue();
+            
+            System.out.println(key + ": " + value);
+        }
+        
+    }
+
+}
