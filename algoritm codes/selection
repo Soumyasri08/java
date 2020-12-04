@@ -1,0 +1,41 @@
+package codes;
+
+public class selection {
+public void selectionSort(int arr[])
+{
+	int len=arr.length;
+	for(int i=0;i<len-1;i++)
+	{
+		int min=i;//consider the value of min is i where min acts as temp index
+		for(int j=i+1;j<len;j++)
+		{
+			if(arr[j]<arr[min])
+			{
+				min = j;//if condition is true min value becomes j
+			}
+		}        
+				int temp=arr[min];
+				arr[min]=arr[i];
+				arr[i]=temp;
+	}
+				for(int i=0;i<arr.length;i++)
+				{
+					//prints the sorted array
+					System.out.println(arr[i]+"");
+				}
+		
+	
+	
+}
+
+public static void main(String args[])
+{
+	//consider an unsorted array
+	int arr[]= {30,50,20,10,70};
+	selection obj = new selection();
+	obj.selectionSort(arr);//call the method selectionSort()
+	
+	
+	
+}
+}
