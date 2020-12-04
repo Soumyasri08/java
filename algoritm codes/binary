@@ -1,0 +1,40 @@
+package codes;
+import java.util.Scanner;
+public class binary {
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		int[] arr = new int[5];
+		int i;
+		for(i=0;i<5;i++)
+		{
+			arr[i]=sc.nextInt();
+		}
+		int key = sc.nextInt();
+		int last=arr.length-1;//last index value
+		binarySearch(arr,0,last,key);//call the method
+		sc.close();
+	}
+	public static void binarySearch(int arr[], int first, int last, int key){  
+		//consider a mid value of an array
+		   int mid = (first + last)/2;  
+		   while( first <= last ){  
+			   //when the a[mid] value is less than key value
+		      if ( arr[mid] < key ){  
+		        first = mid + 1;     
+		      }else if ( arr[mid] == key ){  
+		        System.out.println("Element is found at index: " + mid);  
+		        break;  
+		      }else{  
+		    	  //when a[mid] value is greater than key
+		         last = mid - 1;  
+		      }  
+		      //repeat the process until condition satisfies
+		      mid = (first + last)/2;  
+		   }  
+		   if ( first > last ){  
+		      System.out.println("Element is not found!");  
+		   }  
+		 }  
+
+}
